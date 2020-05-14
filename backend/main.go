@@ -10,7 +10,7 @@ func main() {
 	r.Use(static.Serve("/", static.LocalFile("./web", true)))
 
 	api := r.Group("/api")
-	api.GET("/ping", func(context *gin.Context) {
+	api.GET("/pong", func(context *gin.Context) {
 		context.JSON(200, gin.H{
 			"message": "pong",
 		})
