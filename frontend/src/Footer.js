@@ -6,7 +6,7 @@ class Footer extends Component {
     render() {
         return (
             <a href="https://www.github.com/mountain-viewer">
-                <img className="footerImage" lt="mountain-viewer" src={footer_image}/>
+                <img className="footerImage" alt="mountain-viewer" src={footer_image}/>
             </a>
         )
     }

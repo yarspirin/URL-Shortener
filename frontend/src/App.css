@@ -37,6 +37,19 @@
   }
 }
 
+/* Title */
+
+.titleContainer {
+  position: absolute;
+}
+
+.titleImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+}
+
 /* Footer */
 
 .footerContainer {
