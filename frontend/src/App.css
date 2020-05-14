@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+/* Footer */
+
+.footerContainer {
+  bottom: 20px;
+  position: absolute;
+}
+
+.footerImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+}

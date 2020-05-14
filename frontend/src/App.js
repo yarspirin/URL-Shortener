@@ -1,7 +1,11 @@
 import React from 'react';
+
 import logo from './logo.svg';
+import footer_image from './static/footer_image.png';
 import './App.css';
+
 import PongComponent from './PongComponent'
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -11,7 +15,9 @@ function App() {
         <p>
           Deploy React + Go
         </p>
-        <PongComponent/>
+        <footer className="footerContainer">
+          <Footer/>
+        </footer>
       </header>
     </div>
   );
