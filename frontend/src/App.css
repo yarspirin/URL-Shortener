@@ -50,6 +50,9 @@
 
 /* Input */
 
+.inputContainer {
+}
+
 .textFieldContainer {
   top: 46%;
   position: absolute;

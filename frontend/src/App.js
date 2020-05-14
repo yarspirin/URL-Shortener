@@ -1,12 +1,10 @@
 import React from 'react';
 
-import logo from './logo.svg';
 import './App.css';
 
 import Title from "./Title"
 import Footer from "./Footer";
-import ShortenTextField from "./ShortenTextField";
-import ShortenButton from "./ShortenButton";
+import InputAggregator from "./InputAggregator"
 
 function App() {
   return (
@@ -15,11 +13,8 @@ function App() {
         <div className="titleContainer">
           <Title/>
         </div>
-        <div className="textFieldContainer">
-          <ShortenTextField/>
-        </div>
-        <div className="buttonContainer">
-          <ShortenButton/>
+        <div className="inputContainer">
+          <InputAggregator/>
         </div>
         <footer className="footerContainer">
           <Footer/>

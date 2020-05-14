@@ -20,6 +20,15 @@ const theme = createMuiTheme({
 
 class ShortenTextField extends Component {
 
+    constructor(props) {
+        super(props);
+        this.onChange = this.onChange.bind(this);
+    }
+
+    onChange(event) {
+        this.props.valueChanged(event.target.value)
+    }
+
     render() {
         const { classes } = this.props;
 
@@ -36,6 +45,7 @@ class ShortenTextField extends Component {
                     margin="dense"
                     variant="outlined"
                     type="url"
+                    onChange={this.onChange}
                     InputProps={{
                         className: classes.input
                     }}
