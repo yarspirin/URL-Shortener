@@ -41,13 +41,23 @@
 
 .titleContainer {
   position: absolute;
+  top: 30%;
 }
 
 .titleImage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 700px;
+}
+
+/* Input */
+
+.textFieldContainer {
+  top: 46%;
+  position: absolute;
+}
+
+.buttonContainer {
+  position: absolute;
+  top: 55%;
 }
 
 /* Footer */

@@ -5,6 +5,8 @@ import './App.css';
 
 import Title from "./Title"
 import Footer from "./Footer";
+import ShortenTextField from "./ShortenTextField";
+import ShortenButton from "./ShortenButton";
 
 function App() {
   return (
@@ -12,6 +14,12 @@ function App() {
       <header className="App-header">
         <div className="titleContainer">
           <Title/>
+        </div>
+        <div className="textFieldContainer">
+          <ShortenTextField/>
+        </div>
+        <div className="buttonContainer">
+          <ShortenButton/>
         </div>
         <footer className="footerContainer">
           <Footer/>
