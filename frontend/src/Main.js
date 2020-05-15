@@ -21,9 +21,18 @@ class Main extends Component {
     render() {
         if (this.state && this.state.shortUrl) {
             return (
-                <div>
-                    Short URL:
-                    <a href={this.state.shortUrl}>{this.state.shortUrl}</a>
+                <div className="resultContainer">
+                    <div className="shortURLContainer">
+                        <div>Short URL:</div>
+                        <a className="shortLink" href={this.state.shortUrl}>{this.state.shortUrl}</a>
+                    </div>
+                    <div className="originalURLContainer">
+                        <div>Original URL:</div>
+                        <a className="longLink" href={this.state.shortUrl}>{this.state.shortUrl}</a>
+                    </div>
+                    <footer className="footerContainer">
+                        <Footer/>
+                    </footer>
                 </div>
             )
         } else {

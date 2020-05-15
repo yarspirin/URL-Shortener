@@ -37,6 +37,8 @@
   }
 }
 
+/* Main */
+
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -85,4 +87,29 @@
   flex-direction: column;
   align-items: center;
   width: 200px;
+}
+
+/* Result */
+
+.resultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shortLink {
+  color: green;
+}
+
+.longLink {
+  color: orangered;
+}
+
+.originalURLContainer {
+  top: 50px;
+  position: relative;
+}
+
+.shortURLContainer {
+
 }
