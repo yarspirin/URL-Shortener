@@ -26,7 +26,8 @@ class ShortenTextField extends Component {
     }
 
     onChange(event) {
-        this.props.valueChanged(event.target.value)
+        this.props.valueChanged(event.target.value);
+        this.setState({ text: event.target.value });
     }
 
     render() {
@@ -40,12 +41,15 @@ class ShortenTextField extends Component {
             <ThemeProvider theme={theme}>
                 <TextField
                     style={textFieldStyle}
-                    id="standard-basic"
+                    id="textField"
+                    name="textField"
                     label="URL"
                     margin="dense"
                     variant="outlined"
                     type="url"
-                    onChange={this.onChange}
+                    error={ this.props.hasError}
+                    onChange={(e) => { this.onChange(e) }}
+                    helperText={this.props.helperText}
                     InputProps={{
                         className: classes.input
                     }}
