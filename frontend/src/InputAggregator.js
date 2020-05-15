@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import axios from "axios";
+
 import ShortenTextField from "./ShortenTextField";
 import ShortenButton from "./ShortenButton";
 
@@ -35,7 +37,14 @@ class InputAggregator extends Component {
                 helperText: "",
                 hasError: false
             }));
-            console.log('Redirect');
+
+            axios.get('api/pong')
+                .then(response => {
+                    this.props.onShorten(response);
+                })
+                .catch(err => {
+                    console.log(err);
+                })
         }
     }
 
