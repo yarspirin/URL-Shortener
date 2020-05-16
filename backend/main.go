@@ -29,9 +29,10 @@ func main() {
 	r.Use(static.Serve("/", static.LocalFile("./web", true)))
 
 	api := r.Group("/api")
+	prod := r.Group("/")
 
 	api.POST("/shorten", handleShortenRequest)
-	api.GET("/*any", handleGoRequest)
+	prod.GET("/*any", handleGoRequest)
 
 	_ = r.Run()
 }
