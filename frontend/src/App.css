@@ -108,6 +108,9 @@
 .originalURLContainer {
   top: 50px;
   position: relative;
+  overflow: hidden;
+  text-overflow: clip;
+  width: 1000px;
 }
 
 .shortURLContainer {
