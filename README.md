@@ -6,8 +6,8 @@ URL shortening is used to create shorter aliases for long URLs. We call these sh
 
 * Check it out here: [yarurl.herokuapp.com](yarurl.herokuapp.com)
 
-<img src="./static/main.png" width=400/>
-<img src="./static/response.png" width=400/>
+<img src="./static/main.png" width=600 style="display: flex; justify-content: center;"/>
+<img src="./static/response.png" width=600 style="display: flex; justify-content: center;"/>
 
 # High-level Design and Architecture
 
