@@ -6,18 +6,12 @@ URL shortening is used to create shorter aliases for long URLs. We call these sh
 
 * Check it out here: [yarurl.herokuapp.com](yarurl.herokuapp.com)
 
-![](./static/main.png = 400x)
-![](.static/response.png = 400x)
+<img src="https://github.com/mountain-viewer/URL-Shortener/static/main.png" width=400/>
+<img src="https://github.com/mountain-viewer/URL-Shortener/static/response.png" width=400/>
 
 # High-level Design and Architecture
 
-The app consists of two parts: frontend and backend. 
-
-
-The frontend of the app is written in ReactJS and backed by a number of React components.
-
-
-The backend is written in Go with support of the Gin framework that is used to route requests.
+The app consists of two parts: frontend and backend. The frontend of the app is written in ReactJS and backed by a number of React components.The backend is written in Go with support of the Gin framework that is used to route requests.
 
 # Frontend
 
