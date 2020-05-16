@@ -6,8 +6,8 @@ URL shortening is used to create shorter aliases for long URLs. We call these sh
 
 * Check it out here: [yarurl.herokuapp.com](yarurl.herokuapp.com)
 
-img1
-img2
+![](./static/main.png = 400x)
+![](.static/response.png = 400x)
 
 # High-level Design and Architecture
 
@@ -32,3 +32,7 @@ The backend API contains two methods:
 
 * `api/shorten`: the HTTP POST method that takes a JSON like `{"url": "<URL>"}` and responds with a JSON of kind `{"url": "<URL>", "key": "<KEY>"}`. The key parameter in the response body is used to map the original url and later can be used by the next API methed.
 * `/<KEY>`: the HTTP GET method that, given with the key, redirects to the original page.
+
+# Deployment
+
+For the deployment purposes the app is contained in a Docker image.
