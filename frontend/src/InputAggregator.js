@@ -38,7 +38,13 @@ class InputAggregator extends Component {
                 hasError: false
             }));
 
-            axios.get('api/pong')
+            console.log(url);
+
+            const config = {
+                url: url
+            };
+
+            axios.post('api/shorten', config)
                 .then(response => {
                     this.props.onShorten(response);
                 })

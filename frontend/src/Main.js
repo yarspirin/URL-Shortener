@@ -12,9 +12,12 @@ class Main extends Component {
     }
 
     onShorten(response) {
-        console.log("response");
+        const shortUrl = window.location.href + response.data.key;
+        const originalUrl = response.data.url;
+
         this.setState((this.state, {
-            shortUrl: "http://yarurl.herokuapp.com/"
+            originalUrl: originalUrl,
+            shortUrl: shortUrl
         }));
     }
 
@@ -28,7 +31,7 @@ class Main extends Component {
                     </div>
                     <div className="originalURLContainer">
                         <div>Original URL:</div>
-                        <a className="longLink" href={this.state.shortUrl}>{this.state.shortUrl}</a>
+                        <a className="longLink" href={this.state.shortUrl}>{this.state.originalUrl}</a>
                     </div>
                     <footer className="footerContainer">
                         <Footer/>
