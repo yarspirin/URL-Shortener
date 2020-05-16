@@ -9,8 +9,9 @@ const url = window.location.href;
 const splitResult = url.split("/");
 const shortLink = splitResult[3];
 
-if (shortLink !== "") {
+console.log(shortLink);
 
+if (shortLink !== "") {
     axios.get("api/go/" + shortLink)
         .then(response => {
             console.log(response)
