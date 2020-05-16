@@ -7,7 +7,6 @@ import (
 )
 
 const storagePath = "storage.db"
-var writer *bufio.Writer
 
 func initStorage() ([]string, []string) {
 	createStorageIfNeeded()

@@ -34,7 +34,7 @@ func dbWrite(key string, url string) {
 	mtx.Lock()
 	database.keys[url] = key
 	database.urls[key] = url
-	storage.WriteString(key + " " + url + "\n")
+	_, _ = storage.WriteString(key + " " + url + "\n")
 	mtx.Unlock()
 }
 

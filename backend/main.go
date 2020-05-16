@@ -3,8 +3,10 @@ package main
 import (
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
+	"math/rand"
 	"os"
 	"sync"
+	"time"
 )
 
 type Database struct {
@@ -25,6 +27,7 @@ func initDatabase() {
 }
 
 func startUp() {
+	rand.Seed(time.Now().UnixNano())
 	keys, urls := initStorage()
 	initDatabase()
 	dbStartUpWrite(keys, urls)
