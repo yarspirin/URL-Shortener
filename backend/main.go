@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
+	"os"
 	"sync"
 )
 
@@ -12,6 +13,7 @@ type Database struct {
 }
 
 var (
+	storage *os.File
 	database Database
 	mtx      sync.Mutex
 )
@@ -22,8 +24,14 @@ func initDatabase() {
 	database = Database{keys: keys, urls: urls}
 }
 
-func main() {
+func startUp() {
+	keys, urls := initStorage()
 	initDatabase()
+	dbStartUpWrite(keys, urls)
+}
+
+func main() {
+	startUp()
 
 	r := gin.Default()
 	r.Use(static.Serve("/", static.LocalFile("./web", true)))

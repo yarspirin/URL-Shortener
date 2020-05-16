@@ -38,8 +38,6 @@ class InputAggregator extends Component {
                 hasError: false
             }));
 
-            console.log(url);
-
             const config = {
                 url: url
             };
